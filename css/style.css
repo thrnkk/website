@@ -210,16 +210,16 @@ body {
 
 }
 
-#twitter a i {
+#hackerrank a i {
 
-  color: #1DA1F2;
+  color: #2EC866;
 
 }
 
-#twitter a i:hover {
+#hackerrank a i:hover {
 
   color: white;
-  text-shadow: 0px 0px 20px #1DA1F2;
+  text-shadow: 0px 0px 20px #2EC866;
 
 }
 
