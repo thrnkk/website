@@ -236,11 +236,8 @@ body {
 
 }
 
-img {
+svg {
 
-  width: 200px;
-  height: 200px;
-  filter: brightness(0) invert(1);
   margin-bottom: 70px;
 
 }
