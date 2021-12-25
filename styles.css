@@ -57,6 +57,28 @@ body::after {
     text-shadow: none;
 }
 
+.skew {
+    animation: skew 5s infinite;
+}
+
+@keyframes skew {
+    1% {
+        transform: skewX(160deg);
+        color: magenta;
+    }
+
+    2% {
+        transform: skewX(160deg);
+        color: lightgreen;
+    }
+
+    3% {
+        transform: skewX(0deg);
+        color: #a5e5d4;
+    }
+
+}
+
 .text {
     line-height: 1px;
     padding: 30px;
@@ -67,6 +89,8 @@ body::after {
     text-align: center;
     text-shadow: 2px 4px 10px rgba(165, 229, 212, 0.5);
 }
+
+
 
 .social-holder {
     margin-top: 120px;
@@ -83,6 +107,11 @@ body::after {
     justify-content: center;
     height: 50px;
     width: 50px;
+}
+
+.letter {
+    display: inline-block;
+    width: 40px;
 }
 
 .fs-50 {
@@ -115,10 +144,14 @@ a i:hover {
     .social-holder {
         margin-top: 0px;
         width: 80%;
-      }
+    }
     
-      .fs-50, .fs-60 {
+    .fs-50, .fs-60 {
         font-size: 20px;
-      }
+    }
+
+    .letter {
+        width: 12px;
+    }
 
 }
