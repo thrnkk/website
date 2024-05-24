@@ -1,0 +1,21 @@
+.holder--contact-section {
+    background-color: white;
+}
+
+.contact-image {
+    background-image: url('https://c0.wallpaperflare.com/preview/492/52/946/food-and-drink-book-books-coffee.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-form {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: black;
+}

@@ -1,0 +1,36 @@
+.holder--services-section {
+    background-color: black;
+}
+
+.service--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: add shadow for better visual separation */
+    margin: 10px; /* Optional: add margin between cards */
+    background-color: #fff; /* Optional: add background color for cards */
+}
+
+.holder--services span {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.holder--services-icon {
+    background-color: #3dfc03;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}

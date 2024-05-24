@@ -1,78 +1,100 @@
-$(document).ready(() => {
+import * as THREE from 'three';
 
-    let name = 'Thomas Ricardo Reinke';
+import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
+import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
 
-    let splitName;
-    let strangeChars = ['א','ב','ג','ד','ה','ו','ז','ח','ט','י','כ','ל','מ','נ','ס','ע','פ','צ','ק','ר','ש','ת','?','.','?','?'];
-    let promisesArray = [];
+let camera, controls, scene, renderer, effect;
 
-    setInterval(() => {
+let sphere, plane;
 
-        splitName = name.split('');
+const start = Date.now();
 
-        // for each letter
-        for (let index = 0; index < splitName.length; index++) {
+init();
+animate();
 
-            if (splitName[index] == ' ') {
-                continue;
+function init() {
 
-            } else {
+    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
+    camera.position.y = 500;
+    camera.position.z = 700;
 
-                // 20% chance to glitch that letter
-                if (Math.random() > 0.8) {
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0, 0, 0 );
 
-                    promisesArray.push(randomizeChar(index, splitName[index]).then((response) => {
-                        splitName[response['position']] = response['original'];
-                    }));
+    const light = new THREE.DirectionalLight( 0xffffff, 1);
+    light.position.set( 500, 500, 200 );
+    light.castShadow = true; // default false
+    light.shadowBias = 3;
+    scene.add( light );
 
-                }
-            }
-        }
+    const sphereGeometry = new THREE.SphereGeometry( 200, 30, 10 );
+    const sphereMaterial = new THREE.MeshPhongMaterial( {flatShading: true} );
+    sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+    sphere.castShadow = true;
+    sphere.receiveShadow = false;
+    scene.add( sphere );
 
-        Promise.all(promisesArray).then(() => {
-            $('#glitch').html(setClasses(name));
-        });
 
-    }, 5000);
+    const planeGeometry = new THREE.PlaneGeometry( 1000, 1000 );
+    const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xe0e0e0 });
+    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    plane.position.y = - 200;
+    plane.rotation.x = - Math.PI / 2;
+    plane.receiveShadow = true;
+    scene.add( plane );
 
-    $('#glitch').html(setClasses(name));
+    renderer = new THREE.WebGLRenderer();
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.setSize( window.innerWidth, window.innerHeight );
 
-    async function randomizeChar(position, originalChar) {
+    effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+    effect.setSize( window.innerWidth, window.innerHeight );
+    effect.domElement.style.color = '#3dfc03';
+    effect.domElement.style.backgroundColor = 'black';
 
-        // random delay
-        await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (2000))));
+    const holder = document.getElementsByClassName('holder--threejs');
+    holder[0].appendChild( effect.domElement );
 
-        return new Promise((resolve) => {
+    controls = new TrackballControls( camera, effect.domElement );
 
-            let count = 0;
-            let limit = Math.floor(Math.random() * (100)) + 10;
-            let interval = setInterval(() => {
-    
-                if (count >= limit) {
-                    resolve({'position': position, 'original': originalChar});
-                    clearInterval(interval)
-                }
+    window.addEventListener( 'resize', onWindowResize );
+    window.addEventListener( 'mousemove', onMouseMove );
+}
 
-                let newChar = strangeChars[strangeChars.length * Math.random() | 0];
-                splitName[position] = newChar;
+function onMouseMove(event) {
+    const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
-                $('#glitch').html(setClasses(splitName.join('')));
-                count++;
-        
-            }, 10);
-        });
-    }
+    const targetX = mouseX * 200;
+    const targetY = mouseY * 400;
 
-    // set even space between letters
-    function setClasses(name) {
+    camera.position.x = THREE.MathUtils.lerp(camera.position.x, targetX, 0.1);
+    camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.1);
+    camera.lookAt(scene.position);
+}
 
-        nameList = name.split('');
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-        for (let i = 0; i < nameList.length; i++) {
-            nameList[i] = '<span class="letter">' + nameList[i] + '</span>';
-        }
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    effect.setSize( window.innerWidth, window.innerHeight );
+}
 
-        return nameList.join('');
-    }
+function animate() {
+    requestAnimationFrame( animate );
+    render();
+}
 
-});
+function render() {
+    const timer = Date.now() - start;
+
+    sphere.position.y = Math.abs( Math.sin( timer * 0.002 ) ) * 150;
+    sphere.rotation.x = timer * 0.0003;
+    sphere.rotation.z = timer * 0.0002;
+
+    controls.update();
+
+    effect.render( scene, camera );
+}

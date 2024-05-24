@@ -1,0 +1,20 @@
+.skew {
+    animation: skew 3s infinite;
+}
+
+@keyframes skew {
+    1% {
+        transform: skewX(160deg);
+        color: magenta;
+    }
+
+    5% {
+        transform: skewX(160deg);
+        color: lightgreen;
+    }
+
+    10% {
+        transform: skewX(0deg);
+        color: white;
+    }
+}

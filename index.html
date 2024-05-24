@@ -1,55 +1,448 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/skew.css">
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/hireme.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-	<head>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+    
+    <script src="https://kit.fontawesome.com/98b6b0a857.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
 
-		<meta charset="utf-8">
+    <header class="d-flex align-items-center">
+        <div class="container-1200 d-flex align-items-center justify-content-center">
+            <div class="overlay"></div>
+            <div class="holder--text d-flex flex-column align-items-center justify-content-center">
+                <div class="holder--me mb-4">
+                    <img src="./img/1699283241460.jpg">
+                </div>
+                <h3 class="main--text mb-5 skew">
+                    <span class="skew">
+                        Thomas Ricardo Reinke
+                    </span>
+                </h3>
+                <div class="function--text mb-4">
+                    <span> Web Developer / Freelancer </span>
+                </div>
 
-		<title>Personal Website</title>
+                <div class="holder--brands d-flex align-items-center">
+                    <div class="d-flex justify-content-between w-100">
+                        <i class="fa-brands fa-xl fa-stack-overflow"></i>
+                        <i class="fa-brands fa-xl fa-linkedin"></i>
+                        <i class="fa-brands fa-xl fa-github"></i>
+                        <i class="fa-brands fa-xl fa-docker"></i>
+                    </div>
+                </div>
 
-		<meta name="description" content="Website pessoal.">
-		<meta name="author" content="Thomas Ricardo Reinke" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            </div>
+            <div class="arrow--down">
+                <i class="fa-solid fa-xl fa-caret-down"></i>
+            </div>
+            <div class="holder--threejs"></div>
+        </div>
+    </header>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
-		<link rel="shortcut icon" href="https://raw.githubusercontent.com/thrnkk/website/master/img/me.ico" />
-		<link rel="stylesheet" media="screen" href="./styles.css">
+    <ul class="timeline container-1200 my-5">
+        <li class="timeline-heading text-center ">
+            <div><h3 class="main--text">Experiência</h3></div>
+        </li>
+        
+        <li class=" timeline-unverted" data-aos="fade-up" data-aos-duration="1500">
+            <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Engenheiro de Soluções</h3>
+                    <span class="company text-muted">
+                        <i class="fi fi-br"></i>
+                        BRQ - Nov/2023 - Mai/2024</span>
+                </div>
+                <div class="timeline-body">
+                    <p> Trabalhei juntamente com o cliente Locaweb, onde fui o principal desenvolvedor das tarefas relacionadas ao desenvolvimento do 2FA dentro do Webmail. Também auxiliei no desenvolvimento do microsserviço responsável pela parte de segurança e geração de insights, com a utilização do Grafana e Metabase. </p>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Líder Técnico</h3>
+                    <span class="company text-muted">
+                        <i class="fi fi-br"></i>
+                        Datafrete - Abr/2023 - Out/2023
+                    </span>
+                </div>
+                <div class="timeline-body">
+                    <p> Ao me tornar Tech Lead da equipe de desenvolvedores da Datafrete, foi possível tirar alguns projetos importantes do papel, como o uso de mensagerias, a versão 3.0 do sistema, começo da criação de microsserviços a partir do monolito, entre outros. </p>
+                </div>
+            </div>
+        </li>
+        <li class=" timeline-unverted">
+            <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Desenvolvedor</h3>
+                    <span class="company text-muted">
+                        <i class="fi fi-br"></i>
+                        Datafrete - Jul/2021 - Abr/2023
+                    </span>
+                </div>
+                <div class="timeline-body">
+                    <p> Na Datafrete, desenvolvi tanto back-end como front-end, auxiliei na organização do código legado e sugeri diversas propostas técnicas para melhoria de performance na consulta de bancos de dados e geração de relatórios, reduzindo em até 95% o tempo de geração dos principais relatórios do sistema. Também auxiliei o time no desenvolvimento do Datafrete 2.0, uma repaginação completa do front-end de todo o sistema. </p>
+                </div>
+            </div>
+        </li>
+        <li class=" timeline-inverted">
+            <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Desenvolvedor</h3>
+                    <span class="company text-muted">
+                        <i class="fi fi-br"></i> <i class="fi fi-de"></i>
+                        NETZSCH - Jun/2019 - Jun/2021
+                    </span>
+                </div>
+                <div class="timeline-body">
+                    <p> Na NETZSCH foi onde me deparei com os primeiros frameworks, ferramentas de versionamento e com o Docker. Dei manutenção internos à sistemas já existentes e criei um sistema para utilização interna do setor da TIC, para verificação de SLAs, responsabilidades de cada integrante do time e gráficos apontando os principais gargalos no suporte.</p>
+                </div>
+            </div>
+        </li>
+        <li class=" timeline-unverted">
+            <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Desenvolvedor</h3>
+                    <span class="company text-muted">
+                        <i class="fi fi-br"></i>
+                        D.M System & Design - Jan/2019 - Mai/2019
+                    </span>
+                </div>
+                <div class="timeline-body">
+                    <p> A D.M System foi meu primeiro emprego, foi onde entreguei valor através da programação pela primeira vez para empresas e outros clientes. Não era feito a utilização de frameworks nessa época, então era tudo feito na mão, o que me ensinou bastante sobre o básico da WEB.</p>
+                </div>
+            </div>
+        </li>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="./script.js"></script>
+        <br>
+        <li class="timeline-heading text-center ">
+            <div><h3 class="main--text">Educação</h3></div>
+        </li>
+        <li class="timeline-inverted mt-5">
+            <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Bacharelado, Ciência da Computação</h3>
+                    <span class="company text-muted">FURB - Jan/2019 - Jun/2023</span>
+                </div>
+            </div>
+        </li>
+        <li class=" timeline-unverted">
+            <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Ensino Médio</h3>
+                    <span class="company text-muted">IFC - Jan/2016 - Dez/2018</span>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h3 class="timeline-title">Ensino Fundamental</h3>
+                    <span class="company text-muted">Dr. Amadeu da Luz - Jan/2007 - Dez/2015</span>
+                </div>
+            </div>
+        </li>
+    </ul>
 
-	</head>
+    <div class="holder--services-section">
+        <div class="container-1200 d-flex flex-column align-items-center justify-content-center p-5">
+            <span class="main--text"> Meus serviços </span>
 
-	<body>
+            <div class="holder--services w-100 d-flex justify-content-around mt-5">
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <span> Desenvolvimento </span>
+                    <small class="text-muted text-center"> Criação de sites e aplicativos web modernos, responsivos e escaláveis, focados na melhor experiência do usuário. </small>
+                </div>
 
-		<div class="container">
-			<div class="text skew">
-				<h1 id="glitch">
-					Thomas Ricardo Reinke
-				</h1> 
-			</div>
-			<div class="text">
-				<h4>ALWAYS LEARNING - FULLSTACK</h4>
-			</div>
-		</div>
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <span> Soluções </span>
+                    <small class="text-muted text-center"> Soluções tecnológicas personalizadas para otimizar processos e integrar sistemas, aumentando a eficiência do seu negócio. </small>
+                </div>
 
-		<div class="social-holder">
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <span> Métricas </span>
+                    <small class="text-muted text-center"> Implementação e análise de métricas para monitorar desempenho, tráfego e conversões, auxiliando na tomada de decisões informadas. </small>
+                </div>
 
-			<div class="item fs-60">
-				<a href="https://github.com/thrnkk" target="_blank"><i class="devicon-github-plain"></i></a>
-			</div>
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-regular fa-comments"></i>
+                    </div>
+                    <span> Suporte </span>
+                    <small class="text-muted text-center"> Suporte contínuo, resolução de problemas, atualizações e manutenção para garantir a estabilidade e segurança do seu sistema. </small>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="item fs-50">
-				<a href="https://www.linkedin.com/in/thrnkk/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-			</div>
+    <div class="holder--skills-section">
+        <div class="container-1200 d-flex flex-column align-items-center justify-content-center p-5">
+            <span class="main--text black"> Habilidades & Ferramentas </span>
+            <div class="holder--skills w-100 d-flex justify-content-between mt-5">
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center mb-4" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-php-plain colored"></i>
+                    </div>
+                    <span> PHP </span>
+                    <small class="text-muted text-center"> 5 anos </small>
+                </div>
+    
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <span> JavaScript </span>
+                    <small class="text-muted text-center"> 5 anos </small>
+                </div>
 
-			<div class="item fs-60">
-				<a href="https://hub.docker.com/u/thrnkk" target="_blank"><i class="devicon-docker-plain"></i></a>
-			</div>
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-nodejs-plain-wordmark colored"></i>
+                    </div>
+                    <span> Node.js </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
 
-		</div>
-		
-		
-	</body>
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" style="width: 91px; height: 90px"/>
 
+                    </div>
+                    <span> Python </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                    </div>
+                    <span> CSS 3 </span>
+                    <small class="text-muted text-center"> 5 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                    </div>
+                    <span> HTML </span>
+                    <small class="text-muted text-center"> 5 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-docker-plain colored"></i>
+                    </div>
+                    <span> Docker </span>
+                    <small class="text-muted text-center"> 3 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-git-plain colored"></i>
+                    </div>
+                    <span> Git </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-github-original"></i>
+
+                    </div>
+                    <span> GitHub </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-vuejs-plain colored"></i>
+                    </div>
+                    <span> Vue.js </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-npm-original-wordmark"></i>
+
+                    </div>
+                    <span> NPM </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-laravel-original colored"></i>
+                    </div>
+                    <span> Laravel </span>
+                    <small class="text-muted text-center"> 3 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-composer-line"></i>
+                    </div>
+                    <span> Composer </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-mysql-original colored"></i>
+                    </div>
+                    <span> MySQL </span>
+                    <small class="text-muted text-center"> 5 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-mongodb-plain colored"></i>
+                    </div>
+                    <span> MongoDB </span>
+                    <small class="text-muted text-center"> 2 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-microsoftsqlserver-plain colored"></i>
+                    </div>
+                    <span> SQL Server </span>
+                    <small class="text-muted text-center"> 4 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-postgresql-plain colored"></i>
+                    </div>
+                    <span> PostgreSQL </span>
+                    <small class="text-muted text-center"> 2 anos </small>
+                </div>
+
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-sqlite-plain colored"></i>
+                    </div>
+                    <span> SQLite </span>
+                    <small class="text-muted text-center"> 1 ano </small>
+                </div>
+                
+                <div class="skill--info d-flex flex-column justify-content-start align-items-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-lumen-original colored"></i>
+
+                    </div>
+                    <span> Lumen </span>
+                    <small class="text-muted text-center"> 1 ano </small>
+                </div>
+                <div class="skill--info d-flex flex-column justify-content-center align-items-center text-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
+                    <div class="holder--skills-icon mb-3">
+                        <i class="devicon-zend-original colored"></i>
+
+                    </div>
+                    <span> Zend Framework </span>
+                    <small class="text-muted text-center"> 3 anos </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="holder--hireme-section">
+        <div class="container-800 text-center d-flex flex-column align-items-center">
+            <span class="main--text"> Vamos trabalhar juntos! </span>
+            <span class="my-5"> Precisa de um desenvolvedor para seu próximo projeto? <br><br> Eu ofereço serviços de alta qualidade, personalizados para atender às suas necessidades. Vamos trabalhar juntos para transformar suas ideias em realidade. </span>
+            
+        </div>
+    </div>
+
+    <div class="holder--contact-section">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="w-50 contact-image"></div>
+            <div class="d-flex flex-column w-50 contact-form px-5 py-3">
+                <span class="main--text black mb-4"> Entre em contato! </span>
+                <input class="mb-5">
+                <input class="mb-5">
+                <input class="mb-5">
+                <input class="mb-5">
+                <input class="mb-5">
+                <input class="mb-5">
+                <input class="mb-5">
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 container-1200 black d-flex flex-column text-center">
+        <span> Feito com ❤️ por Thomas </span>
+        <small class="text-muted"> @ 2024. All rights reserved.  </small>
+    </footer>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <script>
+        AOS.init({
+            // Global settings:
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+    
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    
+        });
+    </script>
+</body>
 </html>
