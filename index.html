@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     
     <script src="https://kit.fontawesome.com/98b6b0a857.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -78,6 +80,7 @@
                     <h3 class="timeline-title">Engenheiro de Soluções</h3>
                     <span class="company text-muted">
                         <i class="fi fi-br"></i>
+                        <i class="fi fi-us"></i>
                         BRQ - Nov/2023 - Mai/2024</span>
                 </div>
                 <div class="timeline-body">
@@ -85,7 +88,7 @@
                 </div>
             </div>
         </li>
-        <li class="timeline-inverted ">
+        <li class="timeline-inverted" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -100,7 +103,7 @@
                 </div>
             </div>
         </li>
-        <li class=" timeline-unverted">
+        <li class=" timeline-unverted" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -115,7 +118,7 @@
                 </div>
             </div>
         </li>
-        <li class=" timeline-inverted">
+        <li class=" timeline-inverted" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -130,7 +133,7 @@
                 </div>
             </div>
         </li>
-        <li class=" timeline-unverted">
+        <li class=" timeline-unverted" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge"><i class="fa-solid fa-suitcase"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -150,7 +153,7 @@
         <li class="timeline-heading text-center ">
             <div><h3 class="main--text">Educação</h3></div>
         </li>
-        <li class="timeline-inverted mt-5">
+        <li class="timeline-inverted mt-5" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -159,7 +162,7 @@
                 </div>
             </div>
         </li>
-        <li class=" timeline-unverted">
+        <li class=" timeline-unverted" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -168,7 +171,7 @@
                 </div>
             </div>
         </li>
-        <li class="timeline-inverted ">
+        <li class="timeline-inverted " data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-badge" style="top: 0"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -184,7 +187,7 @@
             <span class="main--text"> Meus serviços </span>
 
             <div class="holder--services w-100 d-flex justify-content-around mt-5">
-                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1500">
                     <div class="holder--services-icon mb-3">
                         <i class="fa-solid fa-code"></i>
                     </div>
@@ -192,7 +195,7 @@
                     <small class="text-muted text-center"> Criação de sites e aplicativos web modernos, responsivos e escaláveis, focados na melhor experiência do usuário. </small>
                 </div>
 
-                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
                     <div class="holder--services-icon mb-3">
                         <i class="fa-solid fa-suitcase"></i>
                     </div>
@@ -200,20 +203,105 @@
                     <small class="text-muted text-center"> Soluções tecnológicas personalizadas para otimizar processos e integrar sistemas, aumentando a eficiência do seu negócio. </small>
                 </div>
 
-                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
-                    <div class="holder--services-icon mb-3">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <span> Métricas </span>
-                    <small class="text-muted text-center"> Implementação e análise de métricas para monitorar desempenho, tráfego e conversões, auxiliando na tomada de decisões informadas. </small>
-                </div>
-
-                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-tilt  data-tilt-scale="1.1">
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
                     <div class="holder--services-icon mb-3">
                         <i class="fa-regular fa-comments"></i>
                     </div>
                     <span> Suporte </span>
                     <small class="text-muted text-center"> Suporte contínuo, resolução de problemas, atualizações e manutenção para garantir a estabilidade e segurança do seu sistema. </small>
+                </div>
+
+                <div class="service--info d-flex flex-column justify-content-start align-items-center position-relative" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="1250" data-aos-duration="1500">
+                    <div class="position-absolute top-0 end-0">
+                        <div class="holder--services-icon service--info-question m-3" data-bs-toggle="modal" data-bs-target="#modalCMS">
+                            <i class="fa-solid fa-question"></i>
+                        </div>
+                    </div>
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                    </div>
+                    <span> CMSs </span>
+                    <small class="text-muted text-center"> Sistemas de gerenciamento de conteúdo personalizados, permitindo que você administre e atualize seus sites de forma eficiente e intuitiva. </small>
+                </div>
+                
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="1500" data-aos-duration="1500">
+                    <div class="position-absolute top-0 end-0">
+                        <div class="holder--services-icon service--info-question m-3" data-bs-toggle="modal" data-bs-target="#modalECOMMERCE">
+                            <i class="fa-solid fa-question"></i>
+                        </div>
+                    </div>
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-brands fa-shopify"></i>
+                    </div>
+                    <span> E-commerce </span>
+                    <small class="text-muted text-center"> Plataformas de e-commerce robustas e seguras, otimizadas para proporcionar uma experiência de compra fluida, aumentar as vendas online e atender às necessidades específicas do seu negócio. </small>
+                </div>
+
+                <div class="service--info d-flex flex-column justify-content-start align-items-center" data-aos="fade-up" data-aos-offset="-300" data-aos-delay="1750" data-aos-duration="1500">
+                    <div class="position-absolute top-0 end-0">
+                        <div class="holder--services-icon service--info-question m-3" data-bs-toggle="modal" data-bs-target="#modalLANDINGPAGE">
+                            <i class="fa-solid fa-question"></i>
+                        </div>
+                    </div>
+                    <div class="holder--services-icon mb-3">
+                        <i class="fa-solid fa-house-laptop"></i>
+                    </div>
+                    <span> Landing Pages </span>
+                    <small class="text-muted text-center"> Landing pages otimizadas para conversão, focando em captar leads e maximizar o retorno sobre o investimento em campanhas de marketing, com design atrativo e funcional </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CMS -->
+    <div class="modal fade" id="modalCMS" tabindex="-1" aria-labelledby="modalCMSLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title black" id="modalCMSLabel">O que é um CMS?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body black">
+                    <span>
+                        O CMS é uma plataforma de software que permite criar, gerenciar e modificar conteúdo em um site sem a necessidade de conhecimento técnico especializado. Ele oferece uma interface amigável para organizar texto, imagens, vídeos e outros elementos, facilitando a publicação e atualização de conteúdo na web.
+                    </span> <br><br>
+                    Você pode ler mais sobre clicando <a href="https://rockcontent.com/br/blog/cms/" target="_blank">aqui!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal ECOMMERCE -->
+    <div class="modal fade" id="modalECOMMERCE" tabindex="-1" aria-labelledby="modalECOMMERCELabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title black" id="modalECOMMERCELabel">O que é um E-commerce?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body black">
+                    <span>
+                        Um e-commerce, ou comércio eletrônico, refere-se aos negócios que estruturam seu processo de compra e venda na Internet. Assim, todas as transações comerciais são realizadas por meio de ferramentas online.
+                    </span> <br><br>
+                    Você pode ler mais sobre clicando <a href="https://rockcontent.com/br/blog/e-commerce-guia/" target="_blank">aqui!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal LANDINGPAGE -->
+    <div class="modal fade" id="modalLANDINGPAGE" tabindex="-1" aria-labelledby="modalLANDINGPAGELabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title black" id="modalLANDINGPAGELabel">O que é uma Landing Page?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body black">
+                    <span>
+                        Landing Pages são páginas que têm como foco principal a conversão dos visitantes. Sua tradução do inglês é “página de aterrisagem”, embora no Marketing Digital sejam conhecidas também como “página de destino” ou “página de captura” por ser o primeiro espaço que um visitante acessa ao entrar em um site.
+                    </span> <br><br>
+                    Você pode ler mais sobre clicando <a href="https://rockcontent.com/br/blog/landing-page/" target="_blank">aqui!</a>
                 </div>
             </div>
         </div>
@@ -380,7 +468,6 @@
                 <div class="skill--info d-flex flex-column justify-content-center align-items-center text-center" data-tilt data-tilt-glare data-tilt-scale="1.1">
                     <div class="holder--skills-icon mb-3">
                         <i class="devicon-zend-original colored"></i>
-
                     </div>
                     <span> Zend Framework </span>
                     <small class="text-muted text-center"> 3 anos </small>
@@ -393,11 +480,18 @@
         <div class="container-800 text-center d-flex flex-column align-items-center">
             <span class="main--text"> Vamos trabalhar juntos! </span>
             <span class="my-5"> Precisa de um desenvolvedor para seu próximo projeto? <br><br> Eu ofereço serviços de alta qualidade, personalizados para atender às suas necessidades. Vamos trabalhar juntos para transformar suas ideias em realidade. </span>
-            
+            <div class="d-flex w-100 justify-content-around align-items-center">
+                <a type="button" class="btn btn-primary d-flex align-items-center" href="mailto:thomas.ricardo.reinke@gmail.com"> 
+                    <span>Enviar um e-mail </span> <i class="fa-regular fa-envelope ms-3"></i>
+                </a>
+                <a type="button" class="btn btn-primary d-flex align-items-center" href="https://wa.me/5547992510258?text=Olá,+gostaria+de+orçar+o+desenvolvimento+de+um+site!" target="_blank">
+                    <span>Enviar um Whatsapp</span> <i class="fa-brands fa-whatsapp ms-3"></i>
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="holder--contact-section">
+    <!-- <div class="holder--contact-section">
         <div class="d-flex flex-row justify-content-center">
             <div class="w-50 contact-image"></div>
             <div class="d-flex flex-column w-50 contact-form px-5 py-3">
@@ -411,7 +505,7 @@
                 <input class="mb-5">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <footer class="py-5 container-1200 black d-flex flex-column text-center">
         <span> Feito com ❤️ por Thomas </span>

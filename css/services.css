@@ -4,6 +4,7 @@
 
 .service--info {
     display: flex;
+    width: 320px;
     flex-direction: column;
     justify-content: space-between; /* Distributes space between elements */
     align-items: center;
@@ -11,6 +12,17 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: add shadow for better visual separation */
     margin: 10px; /* Optional: add margin between cards */
     background-color: #fff; /* Optional: add background color for cards */
+}
+
+.service--info-question {
+    font-size: 12px !important;
+    width: 25px !important;
+    height: 25px !important;
+    cursor: pointer;
+}
+
+.holder--services {
+    flex-wrap: wrap;
 }
 
 .holder--services span {
